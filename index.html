@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <script>
+        function countText() {
+            let text = document.form_main.text.value;
+            document.getElementById('characters').innerText = text.length;
+            document.getElementById('words').innerText = text.length == 0 ? 0 : text.split(/\s+/).length;
+            document.getElementById('rows').innerText = text.length == 0 ? 0 : text.split(/\n/).length;
+          }
+
+        </script>
+    </head>
+    <body>
+        <h1>Word Counter - Count Words and Characters and Lines</h1>
+
+        <form name="form_main">
+          <fieldset>
+            <legend>Counter</legend>
+            <label for="text">Text:</label> <br>
+            <textarea name="text" id="text" cols="30" rows="10" oninput="countText()">
+            </textarea><br>
+            <label for="characters">Caracteres: </label>
+            <span id="characters"></span><br>
+            <label for="words">words: </label>
+            <span id="words"></span><br>
+            <label for="rows">Lines: </label>
+            <span id="rows"></span><br>
+          </fieldset>
+        </form>
+    </body>
+
+</html>
+
+
+
+
